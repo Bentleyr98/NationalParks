@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Yosemite National Park",
+        "location": "37.8651° N, 119.5383° W",
+        "established_date": "October 1, 1890",
+        "area": "3,027.03 square kilometers",
+        "description": "Yosemite National Park is located in California's Sierra Nevada mountains and is renowned for its breathtaking granite cliffs, towering waterfalls, and ancient sequoia groves. It offers diverse ecosystems, including meadows, lakes, and high alpine wilderness.",
+        "activities": ["Hiking", "Camping", "Rock climbing", "Wildlife viewing"],
+        "website": "https://www.nps.gov/yose/index.htm"
+    }, 
+    {
+        "name": "Denali National Park",
+        "location": "63.1148° N, 151.1926° W",
+        "established_date": "February 26, 1917",
+        "area": "24,464.6 square kilometers",
+        "description": "Denali National Park is located in Alaska and is home to the tallest peak in North America, Denali (formerly known as Mount McKinley). The park offers stunning mountain vistas, abundant wildlife, and opportunities for wilderness exploration.",
+        "activities": ["Hiking", "Camping", "Wildlife viewing", "Backcountry skiing"],
+        "website": "https://www.nps.gov/dena/index.htm"
+    },
+    {
+        "name": "Yellowstone National Park",
+        "location": "44.4280° N, 110.5885° W",
+        "established_date": "March 1, 1872",
+        "area": "8,983.18 square kilometers",
+        "description": "Yellowstone National Park is America's first national park and a geothermal wonderland. It features dramatic canyons, alpine rivers, hot springs, and the famous Old Faithful geyser.",
+        "activities": ["Hiking", "Camping", "Fishing", "Wildlife watching"],
+        "website": "https://www.nps.gov/yell/index.htm"
+    }  
+]

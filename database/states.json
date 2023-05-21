@@ -1,0 +1,14 @@
+ [
+    {
+        "name": "Washington",
+        "nationalParks": ["Olympic National Park", "Mount Rainier National Park", "North Cascades National Park"]
+    }, 
+    {
+        "name": "Alaska",
+        "nationalParks": ["Denali National Park", "Glacier Bay National Park", "Katmai National Park", "Kenai Fjords National Park", "Lake Clark National Park", "Wrangell-St. Elias National Park", "Kobuk Valley National Park", "Gates of the Arctic National Park"]
+    },
+    {
+        "name": "Montana",
+        "nationalParks": ["Glacier National Park", "Yellowstone National Park"]
+    }  
+]
