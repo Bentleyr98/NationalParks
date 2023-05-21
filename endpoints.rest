@@ -1,0 +1,128 @@
+###### States routes ######
+GET http://localhost:8080/states/
+### 
+GET https://nationalparkapi.onrender.com/states/
+
+###### National Park routes ######
+GET http://localhost:8080/nationalparks/
+### 
+GET https://nationalparkapi.onrender.com/nationalparks/
+
+
+###### States Individual Routes ######
+GET http://localhost:8080/states/646981a4fb07cc6e7abfe250
+### 
+GET https://nationalparkapi.onrender.com/states/646981a4fb07cc6e7abfe250
+
+###### National Park Individual Routes ######
+GET http://localhost:8080/nationalparks/6469817dfb07cc6e7abfe24c
+### 
+GET https://nationalparkapi.onrender.com/nationalparks/6469817dfb07cc6e7abfe24c
+
+
+###### Create State ######
+POST http://localhost:8080/states/ HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Wyoming",
+  "nationalParks": ["Yellowstone National Park", "Grand Teton National Park"]
+}
+
+###
+POST https://nationalparkapi.onrender.com/states/ HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Wyoming",
+  "nationalParks": ["Yellowstone National Park", "Grand Teton National Park"]
+}
+
+###### Create National Park ######
+POST http://localhost:8080/nationalparks/ HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Rocky Mountain National Park",
+  "location": "40.3428° N, 105.6836° W",
+  "established_date": "January 26, 1915",
+  "area": "1,074.3 square kilometers",
+  "description": "Rocky Mountain National Park is located in Colorado and is known for its majestic peaks, alpine lakes, and diverse ecosystems. The park offers scenic drives, hiking trails, and opportunities to spot wildlife such as elk, bighorn sheep, and black bears.",
+  "activities": ["Hiking", "Camping", "Scenic drives", "Wildlife viewing"],
+  "website": "https://www.nps.gov/romo/index.htm"
+}
+
+###
+POST https://nationalparkapi.onrender.com/nationalparks/ HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Rocky Mountain National Park",
+  "location": "40.3428° N, 105.6836° W",
+  "established_date": "January 26, 1915",
+  "area": "1,074.3 square kilometers",
+  "description": "Rocky Mountain National Park is located in Colorado and is known for its majestic peaks, alpine lakes, and diverse ecosystems. The park offers scenic drives, hiking trails, and opportunities to spot wildlife such as elk, bighorn sheep, and black bears.",
+  "activities": ["Hiking", "Camping", "Scenic drives", "Wildlife viewing"],
+  "website": "https://www.nps.gov/romo/index.htm"
+}
+
+
+###### Update State ######
+PUT http://localhost:8080/states/646981a4fb07cc6e7abfe250 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Wyoming",
+  "nationalParks": ["Yellowstone National Park", "Grand Teton National Park "]
+}
+
+###
+PUT https://nationalparkapi.onrender.com/states/646981a4fb07cc6e7abfe250 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Wyoming",
+  "nationalParks": ["Yellowstone National Park ", "Grand Teton National Park"]
+}
+
+###### Update National Park ######
+PUT http://localhost:8080/nationalparks/6469817dfb07cc6e7abfe24c HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Rocky Mountain National Park",
+  "location": "40.3428° N, 105.6836° W ",
+  "established_date": "January 26, 1915",
+  "area": "1,074.3 square kilometers",
+  "description": "Rocky Mountain National Park is located in Colorado and is known for its majestic peaks, alpine lakes, and diverse ecosystems. The park offers scenic drives, hiking trails, and opportunities to spot wildlife such as elk, bighorn sheep, and black bears.",
+  "activities": ["Hiking", "Camping", "Scenic drives", "Wildlife viewing"],
+  "website": "https://www.nps.gov/romo/index.htm"
+}
+
+###
+PUT https://nationalparkapi.onrender.com/nationalparks/6469817dfb07cc6e7abfe24c HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Rocky Mountain National Park",
+  "location": "40.3428° N, 105.6836° W",
+  "established_date": "January 26, 1915",
+  "area": "1,074.3 square kilometers ",
+  "description": "Rocky Mountain National Park is located in Colorado and is known for its majestic peaks, alpine lakes, and diverse ecosystems. The park offers scenic drives, hiking trails, and opportunities to spot wildlife such as elk, bighorn sheep, and black bears.",
+  "activities": ["Hiking", "Camping", "Scenic drives", "Wildlife viewing"],
+  "website": "https://www.nps.gov/romo/index.htm"
+}
+
+###### Delete State ######
+
+DELETE http://localhost:8080/states/6469a01fc318c9d5533bcb0a HTTP/1.1
+
+###
+DELETE https://nationalparkapi.onrender.com/states/646981a4fb07cc6e7abfe250 HTTP/1.1
+
+###### Delete National Park ######
+
+DELETE http://localhost:8080/nationalparks/6469817dfb07cc6e7abfe24c HTTP/1.1
+
+###
+DELETE https://nationalparkapi.onrender.com/nationalparks/6469a054f5925670e38e83b4 HTTP/1.1
