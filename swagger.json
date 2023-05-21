@@ -5,7 +5,7 @@
     "description": "This is to test routes for our National Parks API. Most routes will require an ID to view, edit, or delete specific national parks.",
     "version": "1.0.0"
   },
-  "host": "nationalparkapi.onrender.com/",
+  "host": "nationalparkapi.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
