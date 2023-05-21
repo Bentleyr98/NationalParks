@@ -5,8 +5,8 @@ const doc = {
     title: 'National Parks API',
     description: 'This is to test routes for our National Parks API. Most routes will require an ID to view, edit, or delete specific national parks.',
   },
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: 'nationalparkapi.onrender.com/',
+  schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
