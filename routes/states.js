@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const stController = require("../controllers/states.js");
+const validate = require("../validation/validate.js")
 
 
 //view all states

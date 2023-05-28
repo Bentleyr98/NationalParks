@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const npController = require("../controllers/nationalPark.js");
+const validate = require("../validation/validate.js")
 
 
 //view all National Parks

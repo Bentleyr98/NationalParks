@@ -3,15 +3,22 @@ const ObjectId = require("mongodb").ObjectId;
 
 
 const getAllStates = async (req, res, next) => {
-  const result = await mongodb.getDb().db().collection("states").find();
-  result.toArray().then((lists) => {
+  try{
+    const result = await mongodb.getDb().db().collection("states").find();
+    result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists);
   });
+  }catch(error){res.status(500)
+    .json(
+      response.error || "Some error occurred while getting all the states."
+    );}
+  
 };
 
 const getState = async (req, res, next) => {
-  const statesId = new ObjectId(req.params.id);
+  try{
+    const statesId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
     .db()
@@ -22,31 +29,42 @@ const getState = async (req, res, next) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists[0]);
   });
+  } catch(error){res.status(500)
+    .json(
+      response.error || "Some error occurred while getting the state."
+    );}
 };
 
 const createState = async (req, res) => {
-  const state = {
-    name: req.body.name,
-    nationalParks: req.body.nationalParks
-  };
-  const response = await mongodb
-    .getDb()
-    .db()
-    .collection("states")
-    .insertOne(state);
-  if (response.acknowledged) {
-    res.status(201).json(response);
-  } else {
-    res
-      .status(500)
-      .json(
-        response.error || "Some error occurred while creating the state."
-      );
-  }
+  try{
+    const state = {
+      name: req.body.name,
+      nationalParks: req.body.nationalParks
+    };
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection("states")
+      .insertOne(state);
+    if (response.acknowledged) {
+      res.status(201).json(response);
+    } else {
+      res
+        .status(500)
+        .json(
+          response.error || "Some error occurred while creating the state."
+        );
+    }
+
+  } catch(error){res.status(500)
+    .json(
+      response.error || "Some error occurred while creating the state."
+    );}
 };
 
 const updateState = async (req, res, next) => {
-  const statesId = new ObjectId(req.params.id);
+  try{
+    const statesId = new ObjectId(req.params.id);
   const state = {
     name: req.body.name,
     nationalParks: req.body.nationalParks
@@ -67,10 +85,15 @@ const updateState = async (req, res, next) => {
         response.error || "Some error occurred while updating the state."
       );
   }
+  } catch(error){res.status(500)
+    .json(
+      response.error || "Some error occurred while updating the state."
+    );}
 };
 
 const deleteState = async (req, res, next) => {
-  const statesId = new ObjectId(req.params.id);
+  try{
+    const statesId = new ObjectId(req.params.id);
   const response = await mongodb
     .getDb()
     .db()
@@ -86,6 +109,11 @@ const deleteState = async (req, res, next) => {
         response.error || "Some error occurred while deleting the state."
       );
   }
+
+  } catch(error){res.status(500)
+    .json(
+      response.error || "Some error occurred while deleting the state."
+    );}
 };
 
 module.exports = {
