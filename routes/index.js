@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../swagger.json');
-const env = require("dotenv").config()
+require("dotenv").config()
 const { auth } = require('express-openid-connect');
 
 const config = {
