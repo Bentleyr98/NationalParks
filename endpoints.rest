@@ -126,3 +126,18 @@ DELETE http://localhost:8080/nationalparks/6469817dfb07cc6e7abfe24c HTTP/1.1
 
 ###
 DELETE https://nationalparkapi.onrender.com/nationalparks/6469a054f5925670e38e83b4 HTTP/1.1
+
+
+###### OAUTH ######
+GET http://localhost:8080/checkloginstatus/
+### 
+GET https://nationalparkapi.onrender.com/checkloginstatus/
+###
+GET http://localhost:8080/login/
+### 
+GET https://nationalparkapi.onrender.com/login/
+###
+GET http://localhost:8080/logout/
+### 
+GET https://nationalparkapi.onrender.com/logout/
+
