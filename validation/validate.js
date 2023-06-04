@@ -25,7 +25,7 @@ validate.nationalParkRules = () => {
             if (classExists){
               throw new Error("Classification already exists.")
             }
-          }) // on error this message is sent.
+          })
     ]
   }
 
