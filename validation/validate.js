@@ -12,23 +12,6 @@ validate.checkData = async (req, res, next) => {
   next()
   }
 
-validate.nationalParkRules = () => {
-    return [
-      // firstname is required and must be string
-      body("classification_name")
-        .trim()
-        .escape()
-        .isLength({ min: 3 })
-        .withMessage("Please provide a valid classification.")
-        .custom(async (classification_name) => {
-            const classExists = await invModel.checkExistingClassification(classification_name)
-            if (classExists){
-              throw new Error("Classification already exists.")
-            }
-          })
-    ]
-  }
-
 
   validate.stateRules = () => {
     return [

@@ -4,6 +4,7 @@ const swaggerDocument = require('../swagger.json');
 require("dotenv").config()
 const { auth } = require('express-openid-connect');
 
+
 const config = {
   authRequired: false,
   auth0Logout: true,
@@ -14,6 +15,8 @@ const config = {
 };
 
 router.use(auth(config));
+
+
 
 router.get('/checkloginstatus', (req, res) => {
     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');

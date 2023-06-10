@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const npController = require("../controllers/nationalPark.js");
 const validate = require("../validation/validate.js")
+const Util = require("../utilities/index.js")
 
 
 //view all National Parks
@@ -10,12 +11,12 @@ router.get("/", npController.getAllNationalParks);
 router.get("/:id", npController.getNationalPark);
 
 //create a National Park
-router.post('/', npController.createNationalPark);
+router.post('/', Util.isLoggedIn, validate.nationalParkRules(), validate.checkData, npController.createNationalPark);
 
 //update a National Park
-router.put('/:id', npController.updateNationalPark);
+router.put('/:id', Util.isLoggedIn, validate.nationalParkRules(), validate.checkData, npController.updateNationalPark);
 
 //delete a National Park
-router.delete('/:id', npController.deleteNationalPark);
+router.delete('/:id', Util.isLoggedIn, npController.deleteNationalPark);
 
 module.exports = router;
